@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { PlanContext } from "../../context/PlanContext";
 import "./platform.css";
 
 const PlanForm = () => {
 
-    const { addTask } = useContext(PlanContext);
+    const { addTask, editTask, edit } = useContext(PlanContext);
 
     const [plan, setPlan] = useState("");
 
@@ -16,8 +17,21 @@ const PlanForm = () => {
 
     const onSubmitHandler = e => {
         e.preventDefault();
-        addTask(plan);
+        if(!edit) {
+            addTask(plan);
+            setPlan("");
+        } else {
+            editTask(edit.id, plan);
+        }
     };
+
+    useEffect(() => {
+        if(edit) {
+            setPlan(edit.title);
+        } else {
+            setPlan("");
+        }
+    },[edit])
 
     return (
             <form 
@@ -32,7 +46,9 @@ const PlanForm = () => {
                     required
                 />
                 <br />
-                <button type="submit">Add</button>
+                <button type="submit">
+                    {edit ? "Edit" : "Add"}
+                </button>
             </form>
     )
 };

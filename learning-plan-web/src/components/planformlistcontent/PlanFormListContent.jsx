@@ -5,7 +5,7 @@ import "./planformlistcontent.css";
 
 const PlanFormListContent = props => {
 
-    const { deleteTask } = useContext(PlanContext);
+    const { deleteTask, findTask } = useContext(PlanContext);
         
     return (
         <li className="list">
@@ -17,7 +17,12 @@ const PlanFormListContent = props => {
                 >
                     Delete
                 </button>
-                <button className="planformlist__buttons-edit">Edit</button>
+                <button 
+                    className="planformlist__buttons-edit"
+                    onClick={() => findTask(props.task.id)}
+                >
+                    Edit
+                </button>
             </div>
         </li>
     )
