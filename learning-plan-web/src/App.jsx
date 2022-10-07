@@ -5,6 +5,7 @@ import PlanFormList from "./components/planformlist/PlanFormList";
 import Title from "./components/title/Title";
 import PlanContextProvider from "./context/PlanContext";
 import studyingImg from "./assets/studying-figure.png";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
           />
           <PlanFormList />
         </div>
+        <Footer />
       </PlanContextProvider>
     </div>
   )
