@@ -2,6 +2,7 @@ import React from "react";
 import "./title.css";
 
 const Title = () => {
+    
     return (
         <section className="title">
             <h1>

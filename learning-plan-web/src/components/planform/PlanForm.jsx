@@ -1,7 +1,4 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useContext } from "react";
+import React, { useState, useEffect, useContext} from "react";
 import { PlanContext } from "../../context/PlanContext";
 import "./platform.css";
 
@@ -31,7 +28,7 @@ const PlanForm = () => {
         } else {
             setPlan("");
         }
-    },[edit])
+    },[edit]);
 
     return (
             <form 

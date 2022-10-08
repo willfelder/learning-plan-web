@@ -1,7 +1,6 @@
-import React from "react";
-import { useContext } from "react";
-import { PlanContext } from "../../context/PlanContext";
+import React, { useContext } from "react";
 import "./planformlistcontent.css";
+import { PlanContext } from "../../context/PlanContext";
 
 const PlanFormListContent = props => {
 

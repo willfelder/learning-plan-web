@@ -1,15 +1,17 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import uuid from "react-uuid";
 
 export const PlanContext = createContext();
 
 const PlanContextProvider = props => {
 
-    const [tasks, setTasks] = useState([
-        {id: 1, title: "Learn React"}
-    ]);
-    
+    const initialState = JSON.parse(localStorage.getItem("tasks")) || [];
+    const [tasks, setTasks] = useState(initialState);
     const [edit, setEdit] = useState(null);
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+    },[tasks])
 
     const addTask = task => {
         setTasks([...tasks, {id: uuid(), title: task}]);
