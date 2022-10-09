@@ -1,5 +1,5 @@
 ## Learning Plan Website
-![ecommerce](https://user-images.githubusercontent.com/73253144/194750241-c685482d-43fe-43f2-907c-9b60cf5412a4.png)
+![learning-app](https://user-images.githubusercontent.com/73253144/194752694-8add9899-e6a0-4478-93c5-ff2fa015f9fe.png)
 
 ## Features
 - Functional components.
