@@ -1,0 +1,60 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 90%;
+    margin-bottom: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.planformlist__buttons-delete {
+    padding: 10px;
+    margin-right: 10px;
+    min-width: 60px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    background: rgba(255, 3, 3, 0.82);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 3, 3, 0.25);
+}
+
+.planformlist__buttons-delete:hover {
+    background: rgba(253, 72, 72, 0.82);  
+}
+
+.planformlist__buttons-edit {
+    padding: 10px;
+    margin-right: 20px;
+    min-width: 60px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+    background: #161616;
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 3, 3, 0.25);
+}
+
+.planformlist__buttons-edit:hover {
+    background-color: #4e4e4e;
+}

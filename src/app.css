@@ -1,0 +1,20 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content img {
+    flex: 1;
+    width: 300px;
+    height: auto;
+}
+
+@media screen and (max-width: 770px) {
+
+    .content {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+}
